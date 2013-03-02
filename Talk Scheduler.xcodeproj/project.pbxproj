@@ -24,6 +24,10 @@
 		EAE3116F16DFE12800F49366 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE3116D16DFE12800F49366 /* DetailViewController.xib */; };
 		EAE3117D16DFE95100F49366 /* OrgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE3117B16DFE95100F49366 /* OrgViewController.m */; };
 		EAE3117E16DFE95100F49366 /* OrgViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE3117C16DFE95100F49366 /* OrgViewController.xib */; };
+		EAE3119E16E0F27000F49366 /* SpeakerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE3119C16E0F27000F49366 /* SpeakerListViewController.m */; };
+		EAE3119F16E0F27000F49366 /* SpeakerListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE3119D16E0F27000F49366 /* SpeakerListViewController.xib */; };
+		EAE311A316E152DD00F49366 /* SpeakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE311A116E152DD00F49366 /* SpeakerViewController.m */; };
+		EAE311A416E152DD00F49366 /* SpeakerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE311A216E152DD00F49366 /* SpeakerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +55,12 @@
 		EAE3117A16DFE95100F49366 /* OrgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgViewController.h; sourceTree = "<group>"; };
 		EAE3117B16DFE95100F49366 /* OrgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgViewController.m; sourceTree = "<group>"; };
 		EAE3117C16DFE95100F49366 /* OrgViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrgViewController.xib; sourceTree = "<group>"; };
+		EAE3119B16E0F27000F49366 /* SpeakerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerListViewController.h; sourceTree = "<group>"; };
+		EAE3119C16E0F27000F49366 /* SpeakerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerListViewController.m; sourceTree = "<group>"; };
+		EAE3119D16E0F27000F49366 /* SpeakerListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerListViewController.xib; sourceTree = "<group>"; };
+		EAE311A016E152DD00F49366 /* SpeakerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerViewController.h; sourceTree = "<group>"; };
+		EAE311A116E152DD00F49366 /* SpeakerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerViewController.m; sourceTree = "<group>"; };
+		EAE311A216E152DD00F49366 /* SpeakerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,9 @@
 				EAE3115916DFE12800F49366 /* AppDelegate.m */,
 				EAE3116416DFE12800F49366 /* MasterViewController.h */,
 				EAE3116516DFE12800F49366 /* MasterViewController.m */,
+				EAE311A016E152DD00F49366 /* SpeakerViewController.h */,
+				EAE311A116E152DD00F49366 /* SpeakerViewController.m */,
+				EAE311A216E152DD00F49366 /* SpeakerViewController.xib */,
 				EAE3116716DFE12800F49366 /* DetailViewController.h */,
 				EAE3116816DFE12800F49366 /* DetailViewController.m */,
 				EAE3116A16DFE12800F49366 /* MasterViewController.xib */,
@@ -110,6 +123,9 @@
 				EAE3116116DFE12800F49366 /* Talk_Scheduler.xcdatamodeld */,
 				EAE3115016DFE12800F49366 /* Supporting Files */,
 				EAE3117A16DFE95100F49366 /* OrgViewController.h */,
+				EAE3119B16E0F27000F49366 /* SpeakerListViewController.h */,
+				EAE3119C16E0F27000F49366 /* SpeakerListViewController.m */,
+				EAE3119D16E0F27000F49366 /* SpeakerListViewController.xib */,
 				EAE3117B16DFE95100F49366 /* OrgViewController.m */,
 				EAE3117C16DFE95100F49366 /* OrgViewController.xib */,
 			);
@@ -188,6 +204,8 @@
 				EAE3116C16DFE12800F49366 /* MasterViewController.xib in Resources */,
 				EAE3116F16DFE12800F49366 /* DetailViewController.xib in Resources */,
 				EAE3117E16DFE95100F49366 /* OrgViewController.xib in Resources */,
+				EAE3119F16E0F27000F49366 /* SpeakerListViewController.xib in Resources */,
+				EAE311A416E152DD00F49366 /* SpeakerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +222,8 @@
 				EAE3116616DFE12800F49366 /* MasterViewController.m in Sources */,
 				EAE3116916DFE12800F49366 /* DetailViewController.m in Sources */,
 				EAE3117D16DFE95100F49366 /* OrgViewController.m in Sources */,
+				EAE3119E16E0F27000F49366 /* SpeakerListViewController.m in Sources */,
+				EAE311A316E152DD00F49366 /* SpeakerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +354,7 @@
 				EAE3117416DFE12800F49366 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

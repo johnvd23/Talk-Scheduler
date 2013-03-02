@@ -10,6 +10,7 @@
 
 #import "DetailViewController.h"
 #import "OrgViewController.h"
+#import "SpeakerListViewController.h"
 
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -82,7 +83,7 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-        [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+        [context delete:[self.fetchedResultsController objectAtIndexPath:indexPath]];
         
         NSError *error = nil;
         if (![context save:&error]) {
@@ -108,7 +109,24 @@
     [self presentViewController:orgViewController animated:YES completion:nil];
 
 }
-
+- (void)insertSpeakerWithOrg:(NSManagedObject *)org firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email
+{
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSManagedObject *speaker = [NSEntityDescription insertNewObjectForEntityForName:@"Speaker" inManagedObjectContext:context];
+    
+    [speaker setValue:firstName forKey:@"firstName"];
+    [speaker setValue:lastName forKey:@"lastName"];
+    [speaker setValue:email forKey:@"email"];
+    [speaker setValue:org forKey:@"org"];
+    
+    [self saveContext];
+}
+- (void)deleteSpeaker:(NSManagedObject *)speaker
+{
+    NSManagedObject *context = [self.fetchedResultsController managedObjectContext];
+    [context delete:speaker];
+    [self saveContext];
+}
 #pragma mark - Fetched results controller
 
 - (NSFetchedResultsController *)fetchedResultsController
@@ -146,7 +164,16 @@
 	}
     
     return _fetchedResultsController;
-}    
+}
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    NSManagedObject *org = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    SpeakerListViewController *speakerListViewController = [[SpeakerListViewController alloc] initWithMasterViewController:self org:org];
+    
+    [self.navigationController pushViewController:speakerListViewController animated:YES];
+    
+}
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
@@ -238,7 +265,7 @@
     }
 
 }
-- (void)showTeamView
+- (void)showOrgView
 {
     OrgViewController *orgViewController = [[OrgViewController alloc] initWithMasterViewController:self org:nil];
     

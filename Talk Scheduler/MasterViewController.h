@@ -21,6 +21,8 @@
 
 - (void)insertOrgWithName:(NSString *)name address:(NSString *)address city:(NSString *)city state:(NSString *)state;
 - (void)saveContext;
-- (void)showTeamView;
+- (void)showOrgView;
+- (void)insertSpeakerWithOrg:(NSManagedObject *)speaker firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email;
+- (void)deleteSpeaker:(NSManagedObject *)speaker;
 
 @end

@@ -15,6 +15,6 @@
     </entity>
     <elements>
         <element name="Organization" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="Speaker" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="Speaker" positionX="567" positionY="264" width="128" height="105"/>
     </elements>
 </model>

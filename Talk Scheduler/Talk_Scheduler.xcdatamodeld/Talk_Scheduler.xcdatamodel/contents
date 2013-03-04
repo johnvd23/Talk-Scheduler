@@ -11,10 +11,10 @@
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="org" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="speakers" inverseEntity="Organization" syncable="YES"/>
+        <relationship name="org" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Organization" inverseName="speakers" inverseEntity="Organization" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Organization" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="Speaker" positionX="567" positionY="264" width="128" height="105"/>
+        <element name="Organization" positionX="160" positionY="192" width="128" height="118"/>
+        <element name="Speaker" positionX="567" positionY="264" width="128" height="103"/>
     </elements>
 </model>

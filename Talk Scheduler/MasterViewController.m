@@ -33,7 +33,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showTeamView)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showOrgView)];
     self.navigationItem.rightBarButtonItem = addButton;
 }
 
@@ -123,7 +123,7 @@
 }
 - (void)deleteSpeaker:(NSManagedObject *)speaker
 {
-    NSManagedObject *context = [self.fetchedResultsController managedObjectContext];
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     [context delete:speaker];
     [self saveContext];
 }

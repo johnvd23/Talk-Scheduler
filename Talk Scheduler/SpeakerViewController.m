@@ -61,8 +61,8 @@
         self.masterController = aMasterController;
         self.org = aOrg;
         self.speaker = aSpeaker;
-        
     }
+return self;
 }
 
 - (IBAction)save:(id)sender

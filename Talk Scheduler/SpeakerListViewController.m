@@ -8,6 +8,7 @@
 
 #import "SpeakerListViewController.h"
 #import "MasterViewController.h"
+#import "SpeakerViewController.h"
 @interface SpeakerListViewController ()
 
 @end
@@ -48,7 +49,9 @@
 
 - (void)showSpeakerView
 {
+    SpeakerViewController *speakerViewController = [[SpeakerViewController alloc] initWithMasterController:masterViewController org:org speaker:nil];
     
+    [self presentViewController:speakerViewController animated:YES completion:nil];
 }
 - (NSArray *)sortSpeakers
 {
@@ -75,9 +78,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
-    return [(NSSet *)[org valueForKey:@"speakers"] count];
+    NSSet *speakersSet = [org valueForKey:@"speakers"];
     
+    return [speakersSet count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -146,13 +149,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    NSManagedObject *speaker = [[self sortSpeakers] objectAtIndex:indexPath.row];
+    SpeakerViewController *speakerViewController = [[SpeakerViewController alloc] initWithMasterController:masterViewController org:org speaker:speaker];
+    [self presentViewController:speakerViewController animated:YES completion:nil];
 }
 
 @end

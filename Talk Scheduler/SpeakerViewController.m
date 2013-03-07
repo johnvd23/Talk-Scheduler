@@ -36,7 +36,7 @@
 - (IBAction)confirmDelete:(id)sender
 {
     if (speaker != nil) {
-        UIActionSheet *confirm = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete Player" otherButtonTitles:nil];
+        UIActionSheet *confirm = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete Speaker" otherButtonTitles:nil];
         confirm.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
         [confirm showInView:self.view];
         
@@ -67,6 +67,8 @@ return self;
 
 - (IBAction)save:(id)sender
 {
+    NSLog(@"saving %@", lastName.text);
+    
     if (masterController != nil) {
         if (speaker != nil) {
             [speaker setValue:firstName.text forKey:@"firstName"];

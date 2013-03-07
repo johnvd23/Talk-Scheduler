@@ -17,6 +17,7 @@
 @property (nonatomic, retain) NSManagedObject *org;
 @property (nonatomic, retain) MasterViewController *masterViewController;
 
+
 - (id)initWithMasterViewController:(MasterViewController *)aMasterViewController org:(NSManagedObject *)aOrg;
 
 - (void)showSpeakerView;

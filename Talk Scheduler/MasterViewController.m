@@ -124,7 +124,7 @@
 - (void)deleteSpeaker:(NSManagedObject *)speaker
 {
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    [context delete:speaker];
+    [context deleteObject:speaker];
     [self saveContext];
 }
 #pragma mark - Fetched results controller

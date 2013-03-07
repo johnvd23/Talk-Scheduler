@@ -5,13 +5,13 @@
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="speakers" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Speaker" inverseName="org" inverseEntity="Speaker" syncable="YES"/>
+        <relationship name="speakers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Speaker" inverseName="org" inverseEntity="Speaker" syncable="YES"/>
     </entity>
     <entity name="Speaker" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="org" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Organization" inverseName="speakers" inverseEntity="Organization" syncable="YES"/>
+        <relationship name="org" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="speakers" inverseEntity="Organization" syncable="YES"/>
     </entity>
     <elements>
         <element name="Organization" positionX="160" positionY="192" width="128" height="118"/>
